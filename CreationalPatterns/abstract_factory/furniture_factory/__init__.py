@@ -1,0 +1,10 @@
+from furniture_factory.furniture_factory import FurnitureFactory
+from furniture_factory.modern_furniture import ModernFurniture
+from furniture_factory.victorian_furniture import VictorianFurniture
+from chair.modern_chair import ModernChair
+from chair.victorian_chair import VictorianChair
+from sofa.modern_sofa import ModernSofa
+from sofa.victorian_sofa import VictorianSofa
+from coffee_table.modern_coffee_table import ModernCoffeeTable
+from coffee_table.victorian_coffee_table import VictorianCoffeTable
+
