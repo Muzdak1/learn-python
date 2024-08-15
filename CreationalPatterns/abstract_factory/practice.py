@@ -109,7 +109,7 @@ class CoffeTable(ABC):
     def has_legs(self):
         pass
 
-class VictorianCoffeTable(Sofa):
+class VictorianCoffeTable(CoffeTable):
 
     def has_legs(self):
         return ("Victorian CoffeTable")
