@@ -8,8 +8,8 @@ def main():
     director1 = Director(build_automatic_car)
 
     automatic_sports_car = director1.sports_car()
-
     automatic_suv_car = director1.automatic_suv()
+    
     print(automatic_sports_car.__dict__)
     print(automatic_suv_car.__dict__)
 

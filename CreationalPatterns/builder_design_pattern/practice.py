@@ -97,33 +97,44 @@ class Director:
     def __init__(self, builder):
         self.builder = builder
 
-
     def automatic_suv(self):
-        return self.builder.set_seats(7).set_engine("V8").set_gps("GPS: Yes").get_result()
-        
-    
+        if isinstance(self.builder, CarBuilder):
+            return self.builder.set_seats(7).set_engine("V8").set_gps("GPS: Yes").get_result()
+        else:
+            raise TypeError("Builder is not of type CarBuilder")
+
     def sports_car(self):
-        return self.builder.set_seats(2).set_engine("1.8").set_gps("GPS: Yes").get_result()
-    
+        if isinstance(self.builder, CarBuilder):
+            return self.builder.set_seats(2).set_engine("1.8").set_gps("GPS: Yes").get_result()
+        else:
+            raise TypeError("Builder is not of type CarBuilder")
+
     def manual_suv(self):
-        return self.builder.set_seats(7).set_engine("V8").set_gps("GPS: Yes").set_manual_gear("Yes").get_result()
-        
+        if isinstance(self.builder, CarManualBuilder):
+            return self.builder.set_seats(7).set_engine("V8").set_gps("GPS: Yes").set_manual_gear("Yes").get_result()
+        else:
+            raise TypeError("Builder is not of type CarManualBuilder")
+            
 def main():
 
     build_automatic_car = CarBuilder()
 
     director1 = Director(build_automatic_car)
 
-    automatic_sports_car = director1.sports_car()
-
+    automatic_sports_car =  director1.sports_car()
     automatic_suv_car = director1.automatic_suv()
+    # car = director1.manual_suv()
+
     print(automatic_sports_car.__dict__)
     print(automatic_suv_car.__dict__)
+    # print(car.__dict__)
 
     build_manual_car = CarManualBuilder()
     director2 = Director(build_manual_car)
     manual_suv_car = director2.manual_suv()
+    # car = director2.sports_car()
     print(manual_suv_car.__dict__)
+    # print(car.__dict__)
 
 
 if __name__ == "__main__":
