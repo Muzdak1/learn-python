@@ -3,11 +3,9 @@ from shapes import Circle
 from colors import RedColor
 
 def main():
-    circle = Circle()
     red_color = RedColor()
-    red_color_circle = circle.shape(red_color)
-    print(red_color_circle)
-  
+    red_circle = Circle(red_color)
+    print(red_circle.shape())       
 
 if __name__ == "__main__":
     main()

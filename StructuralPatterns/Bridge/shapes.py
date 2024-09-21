@@ -2,6 +2,9 @@ from abc import ABC, abstractmethod
 
 class Shapes(ABC):
     
+    def __init__(self, color):
+        self.color = color
+    
     @abstractmethod
     def shape(self):
         pass 
@@ -9,18 +12,11 @@ class Shapes(ABC):
 
 class Rectangle(Shapes):
 
-    def shape(self, color=None):
-        if color:
-            return f"Rectangle is {color.color()}"
-        else:
-            return "Rectangle with no color"
-    
+    def shape(self):
+        return f"Rectangle is {self.color.color()}"
+
+
 class Circle(Shapes):
 
-    def shape(self, color=None):
-        if color:
-            return f"Circle is {color.color()}"
-        else:
-            return "Circle with no color"
-
-    
+    def shape(self):
+        return f"Circle is {self.color.color()}"
