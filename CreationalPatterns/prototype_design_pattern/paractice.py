@@ -61,3 +61,32 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Testing
+
+# class Rectangle:
+#     def __init__(self, _width, _height, _value):
+#         self._width = _width
+#         self._height = _height
+#         self._value = _value
+
+#     def __repr__(self):
+#         return f"Rectangle(width={self._width}, height={self._height})"
+
+# # Create an instance of Rectangle
+# values = [200]
+# original = Rectangle(10, 5, values)
+
+# # Shallow copy
+# shallow_copied = copy.copy(original)
+# shallow_copied._width = [500]
+# # Deep copy
+# deep_copied = copy.deepcopy(original)
+# deep_copied._width = [500]
+# # Modify the original object
+
+
+# print("Original:", original, id(original._width))
+# print("Shallow Copied:", shallow_copied, id(shallow_copied._width))
+# print("Original:", original, id(original._width))
+# print("Deep Copied:", deep_copied, id(deep_copied._width))

@@ -1,7 +1,6 @@
 from abc import abstractmethod, ABC
 
 
-
 class Core(ABC):
 
     @abstractmethod
@@ -53,38 +52,3 @@ converted_xml_to_josn = xml_to_json.convert_xml_to_Json()
 analytics = AnalyticalJsonLib()
 chart = analytics.charts(converted_xml_to_josn)
 print(chart)
-
-
-
-
-
-
-
-# class UsPlugs:
-#     def charge(self):
-#         return "Charging"
-
-
-# class PkPlugs:
-#      def charge(self):
-#         return "Charging"
-     
-
-# class PlugAdapter:
-#     def __init__(self, plug):
-#         self.plug = plug
-
-#     def charge(self):
-#         return self.plug.charge()
-
-#     pass
-
-# us_plug = UsPlugs()
-# pk_plug = PkPlugs()
-
-# adapter = PlugAdapter(us_plug)
-# print(adapter.charge())  # Output: Charging with US plug
-
-# # Adapter wraps the PK plug
-# adapter = PlugAdapter(pk_plug)
-# print(adapter.charge())  # Output: Charging with PK plug
